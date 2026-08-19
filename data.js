@@ -1,5 +1,5 @@
 /**
- * This file contains the data for the CACV Young Family Fellowship materials.
+ * This file contains the data for the CACV Caleb Fellowship materials.
  * Since Google Drive cannot be automatically scraped for its contents via static HTML,
  * you can manually maintain the categories and links here.
  * 
