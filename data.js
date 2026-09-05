@@ -30,5 +30,11 @@ const categoriesData = [
         description: "Event rundowns and scheduled activities.",
         url: "https://docs.google.com/spreadsheets/d/1RXUL4R6O6BroA73F9p2eljo-_rLz2kHcpl1TWMNmM7c/edit?usp=drive_link",
         icon: "list-checks"
+    },
+    {
+        title: "Member Database",
+        description: "Member records and database directory.",
+        url: "https://docs.google.com/spreadsheets/d/1-Ju3_pKX2zrdT_knhSZtzTwyARyyQ8ox24rE2JS--MM/edit?gid=0#gid=0",
+        icon: "database"
     }
 ];
