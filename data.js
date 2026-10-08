@@ -26,10 +26,33 @@ const categoriesData = [
         icon: "users"
     },
     {
-        title: "Rundown and Activities",
-        description: "Event rundowns and scheduled activities.",
+        title: "Calendar and Activities",
+        description: "Fellowship calendar and scheduled activities.",
         url: "https://docs.google.com/spreadsheets/d/1RXUL4R6O6BroA73F9p2eljo-_rLz2kHcpl1TWMNmM7c/edit?usp=drive_link",
-        icon: "list-checks"
+        icon: "calendar"
+    },
+    {
+        title: "Fellowship Rundown",
+        description: "Fellowship run-sheets, duty rosters, and meeting schedules.",
+        url: "https://docs.google.com/spreadsheets/d/1iAWY4VYA61DI6Cto1oonnLb-nmBEurh00gkUQs1MTo4/edit?usp=drive_link",
+        icon: "clock"
+    },
+    {
+        title: "Guidelines",
+        description: "Approaches, procedures, and communication channels.",
+        icon: "book-open",
+        subItems: [
+            {
+                title: "Communication Channels",
+                url: "https://docs.google.com/spreadsheets/d/1BfUAVXClGqz22qelY-ea8cWeKs0piw2u1CYqUVuxulk/edit?usp=drive_link",
+                icon: "chats-circle"
+            },
+            {
+                title: "Pre-Bible Study Approach",
+                url: "https://docs.google.com/document/d/1tacYKn391bLSiRqHlG00WWgi4alvUAOPbHCfp48SeCg/edit?usp=drive_link",
+                icon: "book-bookmark"
+            }
+        ]
     },
     {
         title: "Member Database",
