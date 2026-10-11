@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CACV Caleb Fellowship - Coordinator Portal</title>
+    <meta name="description" content="Central hub for CACV Caleb Fellowship coordinators to access materials.">
+    <!-- Google Fonts: Outfit for a modern, welcoming, rounded look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons for modern line icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-coordinator" data-default-role="coordinator">
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <div class="header-top">
+                <div class="header-icon">
+                    <i class="ph ph-users-three"></i>
+                </div>
+                <div class="header-role-pill" id="header-role-pill">Coordinator Portal</div>
+            </div>
+            <h1 id="header-title">CACV Caleb Fellowship</h1>
+            <p id="header-subtitle">Welcome! Select a category below to access materials for coordinators.</p>
+
+            <!-- Role View Switcher -->
+            <div class="role-selector-wrapper">
+                <div class="role-selector" role="radiogroup" aria-label="Select role view">
+                    <button type="button" class="role-btn" id="btn-committee" data-role="committee" role="radio" aria-checked="false">
+                        <i class="ph ph-shield-star"></i>
+                        <span>Committee</span>
+                    </button>
+                    <button type="button" class="role-btn active" id="btn-coordinator" data-role="coordinator" role="radio" aria-checked="true">
+                        <i class="ph ph-user-gear"></i>
+                        <span>Coordinator</span>
+                    </button>
+                </div>
+                <div class="role-status-badge" id="role-status-badge">
+                    <span class="status-dot"></span>
+                    <span id="role-status-text">Active View: <strong>Coordinator</strong> (Coordinator Materials)</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="categories-grid" id="categories-container">
+            <!-- Categories will be injected here by script.js -->
+        </div>
+        
+        <footer class="footer">
+            <p>For access issues, please ensure you are logged into your authorized Google account.</p>
+        </footer>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

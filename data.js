@@ -17,30 +17,35 @@ const categoriesData = [
         title: "Planning and Action Table",
         description: "Master planning document and action items.",
         url: "https://docs.google.com/spreadsheets/d/1enJms3HOvZKA06RSscX5rCwpq1KcSYTS79QKJwUkv9A/edit?usp=drive_link",
-        icon: "table"
+        icon: "table",
+        roles: ["committee"]
     },
     {
         title: "Group List",
         description: "Current list of members and groups.",
         url: "https://docs.google.com/spreadsheets/d/1Pr7Xu8q5vDBJi_SmJdSG3N0G1H_kaGA71XnTRZLlBLc/edit?usp=drive_link",
-        icon: "users"
+        icon: "users",
+        roles: ["committee", "coordinator"]
     },
     {
         title: "Calendar and Activities",
         description: "Fellowship calendar and scheduled activities.",
         url: "https://docs.google.com/spreadsheets/d/1RXUL4R6O6BroA73F9p2eljo-_rLz2kHcpl1TWMNmM7c/edit?usp=drive_link",
-        icon: "calendar"
+        icon: "calendar",
+        roles: ["committee", "coordinator"]
     },
     {
         title: "Fellowship Rundown",
         description: "Fellowship run-sheets, duty rosters, and meeting schedules.",
         url: "https://docs.google.com/spreadsheets/d/1iAWY4VYA61DI6Cto1oonnLb-nmBEurh00gkUQs1MTo4/edit?usp=drive_link",
-        icon: "clock"
+        icon: "clock",
+        roles: ["committee", "coordinator"]
     },
     {
         title: "Guidelines",
         description: "Approaches, procedures, and communication channels.",
         icon: "book-open",
+        roles: ["committee", "coordinator"],
         subItems: [
             {
                 title: "Communication Channels",
@@ -58,6 +63,7 @@ const categoriesData = [
         title: "Member Database",
         description: "Member records and database directory.",
         url: "https://docs.google.com/spreadsheets/d/1-Ju3_pKX2zrdT_knhSZtzTwyARyyQ8ox24rE2JS--MM/edit?gid=0#gid=0",
-        icon: "database"
+        icon: "database",
+        roles: ["committee"]
     }
 ];

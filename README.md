@@ -37,9 +37,25 @@ The site uses [Phosphor Icons](https://phosphoricons.com/). To change an icon, f
    - Click **Save**.
 3. After a few minutes, your site will be live at `https://[your-username].github.io/[repo-name]/`.
 
+## 🔗 Portal URLs (Role-Based Access)
+
+Committees and Coordinators can access the portal via their respective dedicated URLs:
+
+- **Committee URL (Warm Peach Theme, All 6 Icons):**
+  - `https://rockycclee.github.io/cacv_youngfamily/`
+  - *(Or explicitly: `https://rockycclee.github.io/cacv_youngfamily/?role=committee`)*
+
+- **Coordinator URL (Ocean Blue Theme, 4 Filtered Icons):**
+  - `https://rockycclee.github.io/cacv_youngfamily/coordinator.html`
+  - *(Or query parameter: `https://rockycclee.github.io/cacv_youngfamily/?role=coordinator`)*
+
+Both views include a toggle button so users can easily switch views on the fly, with the URL automatically syncing in the address bar.
+
 ## 🎨 Design Notes
 
 - Built with Vanilla HTML, CSS, and JS (No heavy frameworks required).
+- Dynamic role switcher with active status indicators.
+- **Committee Theme:** Warm and welcoming (Orange/Peach/Yellow palette).
+- **Coordinator Theme:** Clean and modern (Ocean/Royal Blue palette).
 - Uses modern CSS techniques: **Glassmorphism**, **CSS Variables**, and **Micro-animations**.
 - Fully responsive on mobile and desktop.
-- Color theme: Warm and welcoming (Orange/Peach/Yellow palette).

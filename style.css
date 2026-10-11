@@ -1,5 +1,5 @@
 :root {
-    /* Warm & Welcoming Color Palette */
+    /* Warm & Welcoming Color Palette (Committee) */
     --primary-color: #F7931E; /* Warm Orange */
     --secondary-color: #F15A24; /* Deeper Orange/Red */
     --accent-color: #FBB03B; /* Bright Yellow/Orange */
@@ -13,6 +13,21 @@
     --shadow-hover: 0 16px 40px 0 rgba(241, 90, 36, 0.2);
     
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Coordinator Blue Theme */
+body.theme-coordinator {
+    --primary-color: #0284C7; /* Ocean / Sky Blue */
+    --secondary-color: #1D4ED8; /* Royal Blue */
+    --accent-color: #38BDF8; /* Sky Cyan */
+    --text-main: #0F172A; /* Deep Slate / Navy */
+    --text-muted: #475569; /* Slate Gray */
+    --bg-color: #F0F7FF; /* Very soft ice blue background */
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --card-border: rgba(203, 228, 250, 0.6);
+    
+    --shadow-soft: 0 8px 32px 0 rgba(2, 132, 199, 0.12);
+    --shadow-hover: 0 16px 40px 0 rgba(29, 78, 216, 0.22);
 }
 
 * {
@@ -30,6 +45,7 @@ body {
     flex-direction: column;
     position: relative;
     overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Animated Background Blobs */
@@ -121,9 +137,115 @@ body {
 .header p {
     font-size: 1.2rem;
     color: var(--text-muted);
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
     line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.header-top {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.header-role-pill {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 0.35rem 1.1rem;
+    border-radius: 999px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+/* Role View Switcher */
+.role-selector-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: 2rem;
+}
+
+.role-selector {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    padding: 0.35rem;
+    box-shadow: var(--shadow-soft);
+    gap: 0.4rem;
+}
+
+.role-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.65rem 1.4rem;
+    border: none;
+    background: transparent;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.role-btn i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.role-btn:hover {
+    color: var(--text-main);
+}
+
+.role-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.role-btn.active i {
+    transform: scale(1.1);
+}
+
+.role-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--card-border);
+    padding: 0.4rem 1.1rem;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: var(--transition);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-color);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Grid */
@@ -283,21 +405,21 @@ body {
     gap: 0.75rem;
     padding: 0.85rem 1.1rem;
     background: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(247, 147, 30, 0.25);
+    border: 1px solid var(--card-border);
     border-radius: 16px;
     color: var(--text-main);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
     transition: var(--transition);
-    box-shadow: 0 2px 8px rgba(247, 147, 30, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .sub-item-link:hover {
     background: #ffffff;
     border-color: var(--primary-color);
     transform: translateX(4px);
-    box-shadow: 0 4px 14px rgba(241, 90, 36, 0.15);
+    box-shadow: var(--shadow-hover);
     color: var(--secondary-color);
 }
 
@@ -334,7 +456,7 @@ body {
     text-align: center;
     margin-top: auto;
     padding-top: 2rem;
-    border-top: 1px solid rgba(247, 147, 30, 0.2);
+    border-top: 1px solid var(--card-border);
     color: var(--text-muted);
     font-size: 0.9rem;
     animation: fadeIn 1s ease-out 1s forwards;
