@@ -62,8 +62,19 @@ const categoriesData = [
     {
         title: "Member Database",
         description: "Member records and database directory.",
-        url: "https://docs.google.com/spreadsheets/d/1-Ju3_pKX2zrdT_knhSZtzTwyARyyQ8ox24rE2JS--MM/edit?gid=0#gid=0",
         icon: "database",
-        roles: ["committee"]
+        roles: ["committee"],
+        subItems: [
+            {
+                title: "Masked File",
+                url: "https://docs.google.com/spreadsheets/d/11U2YwKgG6Q689bWZdROfnLyP7-SA3HuhinCZ3ndxdS4/edit?usp=share_link",
+                icon: "eye-slash"
+            },
+            {
+                title: "Original File",
+                url: "https://docs.google.com/spreadsheets/d/1-Ju3_pKX2zrdT_knhSZtzTwyARyyQ8ox24rE2JS--MM/edit?gid=0#gid=0",
+                icon: "file-lock"
+            }
+        ]
     }
 ];
